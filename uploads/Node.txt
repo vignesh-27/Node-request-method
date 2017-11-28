@@ -1,0 +1,25 @@
+Html form value pass through API TO another html file using Nodejs
+
+1.https://stackoverflow.com/questions/15568851/node-js-how-to-send-data-from-html-to-express
+2.https://www.hacksparrow.com/post-get-request-handling-in-node-js-express.html
+3.https://stackoverflow.com/questions/26614146/how-to-get-data-from-post-request-in-express-nodejs-and-redirect-user-to-html-fi
+4.https://www.youtube.com/watch?v=28Bz_SbXX8U (youtube link just include alternate 1 line query=>
+app.use(bodyParser.urlencoded({ extended: true })); 
+
+Express Module tutorial
+1.https://www.youtube.com/watch?v=MuMs1pLuT7I
+
+
+Mongo db commands :
+
+show dbs                    #show database names
+show collections          #show collections in current database
+show users                 # show users in current database
+show profile                # show most recent system.profile entries with time >= 1ms
+show logs                   # show the accessible logger names
+show log [name]          # prints out the last segment of log in memory, 'global' is default
+use <db_name>          #  set current database
+db.foo.find()                # list objects in collection foo
+db.foo.find( { a : 1 } )    #list objects in foo where a == 1
+it                                #result of the last line evaluated; use to further iterate
+exit                             #quit the mongo shell

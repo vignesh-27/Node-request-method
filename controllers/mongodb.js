@@ -8,7 +8,6 @@ var url_path = "https://ponyfoo.com";
 
 var urlencodedParser = bodyParser.urlencoded({extended:false});
 
-//static get, post, delete function from temporary Object data
 module.exports = function(app){
 
 app.get('/', (req,res)=>{

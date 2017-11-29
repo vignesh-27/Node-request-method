@@ -19,7 +19,6 @@ app.get('/', (req,res)=>{
         json: true,
 
       }).then(data=>{
-       // console.log(data);
         fs.writeFileSync('./controllers/delta.json', JSON.stringify(data), 'utf-8');
             res.json(data);
           });
@@ -39,8 +38,10 @@ app.get('/index/', (req,res)=>{
               res.json(data);
           });
   });
-
-  //scrape method used to get url metadata (hided for future use)
+    
+} //module.exports function ended
+    
+//scrape method used to get url metadata (hided for future use)
 
 // app.get('/meta', function(req,res){
 //   scrape(url1).then(function(metadata){
@@ -49,4 +50,4 @@ app.get('/index/', (req,res)=>{
 //   });
 // });
 
-} //module.exports function ended
+

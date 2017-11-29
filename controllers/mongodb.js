@@ -4,28 +4,28 @@ var scrape = require('html-metadata');
 var fs = require('fs');
 var url = require('url');
 
-var path = "https://ponyfoo.com";
+var url_path = "https://ponyfoo.com";
 
 var urlencodedParser = bodyParser.urlencoded({extended:false});
 
 //static get, post, delete function from temporary Object data
 module.exports = function(app){
 
-app.get('/', function(req,res){
+app.get('/', (req,res)=>{
 
     request({
         method: 'GET',
-        url: path,
+        url: url_path,
         json: true,
 
-      }).then((data)=>{
+      }).then(data=>{
        // console.log(data);
         fs.writeFileSync('./controllers/delta.json', JSON.stringify(data), 'utf-8');
             res.json(data);
           });
 });
 
-app.get('/index/', function(req,res){
+app.get('/index/', (req,res)=>{
 
   var q = url.parse(req.url, true).query;
   var path = q.url;
@@ -34,7 +34,7 @@ app.get('/index/', function(req,res){
           method: 'GET',
           url: path,
           json: true,
-          }).then((data)=>{
+          }).then(data=>{
               fs.writeFileSync('./controllers/new.json', JSON.stringify(data), 'utf-8');
               res.json(data);
           });
